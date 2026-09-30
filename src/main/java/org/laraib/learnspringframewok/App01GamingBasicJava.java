@@ -5,7 +5,7 @@ import org.laraib.learnspringframewok.game.MarioGame;
 import org.laraib.learnspringframewok.game.PacmanGame;
 import org.laraib.learnspringframewok.game.SuperContraGame;
 
-public class AppGamingBasicJava {
+public class App01GamingBasicJava {
 
     public static void main(String[] args) {
 
