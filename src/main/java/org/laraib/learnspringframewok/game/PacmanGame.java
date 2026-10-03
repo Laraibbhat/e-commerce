@@ -1,5 +1,9 @@
 package org.laraib.learnspringframewok.game;
 
+import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
+
+@Component
 public class PacmanGame implements IGame {
 
     @Override
