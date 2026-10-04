@@ -1,6 +1,5 @@
-package org.laraib.learnspringframewok;
+package org.laraib.learnspringframewok.game;
 
-import org.laraib.learnspringframewok.game.*;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;

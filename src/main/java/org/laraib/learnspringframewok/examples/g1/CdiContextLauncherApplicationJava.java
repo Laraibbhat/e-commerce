@@ -1,0 +1,44 @@
+package org.laraib.learnspringframewok.examples.g1;
+
+import jakarta.inject.Inject;
+import jakarta.inject.Named;
+import jdk.jfr.Name;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+
+//@Component
+@Named
+class BussinessService {
+    private DataService dataService;
+
+    public DataService getDataService() {
+        return dataService;
+    }
+
+    @Inject
+    public void setDataService(DataService dataService) {
+        System.out.println("setDataService");
+        this.dataService = dataService;
+    }
+}
+
+@Named
+class DataService {
+
+}
+@Configuration
+@ComponentScan
+public class CdiContextLauncherApplicationJava {
+
+
+    public static void main(String[] args) {
+        try (var context = new AnnotationConfigApplicationContext(CdiContextLauncherApplicationJava.class)) {
+
+            System.out.println(context.getBean(BussinessService.class).getDataService());
+        }
+    }
+}
